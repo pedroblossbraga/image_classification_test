@@ -19,14 +19,20 @@ def main(
     batch_size = 32,
     img_height = 180,
     img_width = 180,
-    
     epochs = 10,
-    
     show_history = True,
-    
     create_setup =  False
-    
 ):
+    """
+    ------------------------
+    Parameters
+    show_history: bool; plot history or not.
+    create_setup: bool; create folders, extract and store images or 
+        not -> if you already have the "image_dataset/not st george"
+        and "image_dataset/st george" directories populated with 
+        images, you can set create_setup to False.
+    ------------------------
+    """
     if create_setup:
         # load images into new folder
         setup_dir(root_path = root_path)
@@ -39,6 +45,8 @@ def main(
         seed=123,
         image_size=(img_height, img_width),
         batch_size=batch_size)
+    
+    # sample validation data
     val_ds = tf.keras.utils.image_dataset_from_directory(
         os.path.join(root_path, 'image_dataset'),
         validation_split=0.2,

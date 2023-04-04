@@ -5,6 +5,9 @@ import os
 
 def save_images(images_urls, 
                 output_dir):
+    """ 
+    Given URLs, read the image and save (it does not exist already)
+    """
     N_imgs = len(images_urls)
     for i, url in enumerate(images_urls):
         img = read_img_from_url(url)

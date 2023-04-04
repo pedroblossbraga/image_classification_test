@@ -20,6 +20,7 @@ def model_inference(
   predictions = model.predict(img_array)
   score = tf.nn.softmax(predictions[0])
   print(
-      "This image most likely belongs to {} with a {:.3f}% confidence."
-      .format(class_names[np.argmax(score)], 100 * np.max(score))
+      "This image most likely belongs to {} with a {:.3f}% confidence.".format(
+          class_names[np.argmax(score)], 100 * np.max(score)
+        )
   )

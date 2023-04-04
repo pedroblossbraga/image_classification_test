@@ -25,8 +25,8 @@ class Model:
             ]
             )
         return Sequential([
-            data_augmentation,
-            layers.Rescaling(1./255),
+            data_augmentation, # flipping images for augmentation
+            layers.Rescaling(1./255), # scaling to [0,1]
             layers.Conv2D(16, 3, padding='same', activation='relu'),
             layers.MaxPooling2D(),
             layers.Conv2D(32, 3, padding='same', activation='relu'),
