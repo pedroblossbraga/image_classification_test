@@ -1,0 +1,6 @@
+image_dataset/
+test_assignment_cv/
+env/
+test_assignment_cv.html
+.DS_Store
+src/__pycache__/
