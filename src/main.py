@@ -13,7 +13,7 @@ from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 
 def main(
-    root_path = '/Users/pedroblossbraga/Desktop/noventiq test CV',
+    root_path = os.path.abspath(os.curdir),
     
     # loader parameters
     batch_size = 32,
@@ -21,7 +21,7 @@ def main(
     img_width = 180,
     epochs = 10,
     show_history = True,
-    create_setup =  True
+    create_setup =  False
 ):
     """
     ------------------------
@@ -82,10 +82,16 @@ def main(
         plot_history_results(history, epochs)
         
     
+    save_model(model = model,
+               out_dir = root_path,
+               model_name = 'model.h5')
+    model.save(os.path.join(root_path, 'my_model.h5'))
+    
     # convert model to tflite_model
     tflite_model = convert_model(model)
     save_model(model = tflite_model,
-               out_dir = root_path)
+               out_dir = root_path,
+               model_name = 'model.tflite')
     
 
 if __name__ == "__main__":

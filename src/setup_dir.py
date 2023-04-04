@@ -1,6 +1,5 @@
 from load_data import load_data
 from utils import create_folder, read_img_from_url
-from load_data import load_data
 import os
 
 def save_images(images_urls, 

@@ -7,6 +7,7 @@ def convert_model(model):
 
     return tflite_model
 
-def save_model(model, out_dir):
-    with open(os.path.join(out_dir, 'model.tflite'), 'wb') as f:
+def save_model(model, out_dir,
+               model_name = 'model.tflite'):
+    with open(os.path.join(out_dir, model_name), 'wb') as f:
         f.write(model)
