@@ -16,7 +16,7 @@ The image below demonstrates the history of training for the model with data aug
 
 In order to use the tf.keras.utils functions to sample data, the images resulting from URLs were stored in a folder for each class.
 
-The notebook with the initial studies can be found in the file "Noventiq assignment CV.ipynb".
+The notebook with the initial studies can be found in the file "Noventiq_assignment_CV.ipynb".
 
 # Training and Inference
 
