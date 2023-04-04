@@ -11,23 +11,27 @@ def model_inference(
                     img_height,
                     img_width,
                     class_names):
-  # load image in desired shape
-  img = tf.keras.utils.load_img(
-      img_path, target_size=(img_height, img_width)
-  )
-    
-  # transform to array
-  img_array = tf.keras.utils.img_to_array(img)
-  img_array = tf.expand_dims(img_array, 0) # Create a batch
+    """
+    Function used on the Google Colaboratory notebook for inference
+    uses the model (not in tflite mode)
+    """
+    # load image in desired shape
+    img = tf.keras.utils.load_img(
+        img_path, target_size=(img_height, img_width)
+    )
 
-  # predict
-  predictions = model.predict(img_array)
-  score = tf.nn.softmax(predictions[0])
-  print(
-      "This image most likely belongs to {} with a {:.3f}% confidence.".format(
-          class_names[np.argmax(score)], 100 * np.max(score)
+    # transform to array
+    img_array = tf.keras.utils.img_to_array(img)
+    img_array = tf.expand_dims(img_array, 0) # Create a batch
+
+    # predict
+    predictions = model.predict(img_array)
+    score = tf.nn.softmax(predictions[0])
+    print(
+        "This image most likely belongs to {} with a {:.3f}% confidence.".format(
+            class_names[np.argmax(score)], 100 * np.max(score)
         )
-  )
+    )
 def lite_model_inference(
                     # model,
                     model,
@@ -35,21 +39,24 @@ def lite_model_inference(
                     img_height,
                     img_width,
                     class_names):
-  # load image in desired shape
-  img = tf.keras.utils.load_img(
-      img_path, target_size=(img_height, img_width)
-  )
-    
-  # transform to array
-  img_array = tf.keras.utils.img_to_array(img)
-  img_array = tf.expand_dims(img_array, 0) # Create a batch
+    """
+    Uses tflite model for inference
+    """
+    # load image in desired shape
+    img = tf.keras.utils.load_img(
+        img_path, target_size=(img_height, img_width)
+    )
 
-  predictions_lite = model(sequential_1_input=img_array)['outputs']
-  score_lite = tf.nn.softmax(predictions_lite)
-  print(
-      "This image most likely belongs to {} with a {:.2f} percent confidence."
-      .format(class_names[np.argmax(score_lite)], 100 * np.max(score_lite))
-  )
+    # transform to array
+    img_array = tf.keras.utils.img_to_array(img)
+    img_array = tf.expand_dims(img_array, 0) # Create a batch
+
+    predictions_lite = model(sequential_1_input=img_array)['outputs']
+    score_lite = tf.nn.softmax(predictions_lite)
+    print(
+        "This image most likely belongs to {} with a {:.2f} percent confidence."
+        .format(class_names[np.argmax(score_lite)], 100 * np.max(score_lite))
+    )
 
 def main(
         image_path,
