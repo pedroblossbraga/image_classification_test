@@ -14,9 +14,9 @@ Since initially the model presented overfitting, data augmentation and dropout r
 The image below demonstrates the history of training for the model with data augmentation and dropout:
 ![](history.png)
 
-
 In order to use the tf.keras.utils functions to sample data, the images resulting from URLs were stored in a folder for each class.
 
+The notebook with the initial studies can be found in the file "Noventiq assignment CV.ipynb".
 
 # Training and Inference
 
@@ -34,6 +34,7 @@ The model is trained with the src/main.py module, and the prediction can be perf
 - All outputs with images were deleted, for privacy reasons.
 - The datasets and images were not uploaded to this repository, for privacy reasons.
 - This project is protected with a MIT LICENSE.
+- The following reference were utilized to support this study.
 
 # References
 
