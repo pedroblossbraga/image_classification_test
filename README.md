@@ -29,6 +29,7 @@ The model is trained with the src/main.py module, and the prediction can be perf
 - To create the necessary folders and extract the images into a folder, use src/setup_dir.py
 - The model is in src/models.py
 - A function to load the URL-databases is in src/load_data.py
+- The requirements.txt file contains the versions utilized to execute this project in a local environment (fresh virtualenv). It is also possible to run the project in the Google Colaboratory notebook "Noventiq_assignment_CV.ipynb", which already has a considerable amount of libraries imported. It is recommended to create a virtualenv to execute this project.
 
 # Disclaimer / Privacy Notice
 - All outputs with images were deleted, for privacy reasons.
