@@ -11,7 +11,13 @@ Generally, 10 epochs were used, but in a production-model trained in a cloud env
 
 Since initially the model presented overfitting, data augmentation and dropout regularization were applied. The resulting model had a smooth evolution of training accuracy, and an increase in validation accuracy, whereas the first model had a abrupt increase in training accuracy and a decay in validation accuracy.
 
+The image below demonstrates the history of training for the model with data augmentation and dropout:
+![](history.png)
+
+
 In order to use the tf.keras.utils functions to sample data, the images resulting from URLs were stored in a folder for each class.
+
+
 
 # Training and Inference
 
