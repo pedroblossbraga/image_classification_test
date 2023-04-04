@@ -18,7 +18,6 @@ The image below demonstrates the history of training for the model with data aug
 In order to use the tf.keras.utils functions to sample data, the images resulting from URLs were stored in a folder for each class.
 
 
-
 # Training and Inference
 
 The model is trained with the src/main.py module, and the prediction can be performed with the function in src/predict.py.
@@ -30,6 +29,11 @@ The model is trained with the src/main.py module, and the prediction can be perf
 - To create the necessary folders and extract the images into a folder, use src/setup_dir.py
 - The model is in src/models.py
 - A function to load the URL-databases is in src/load_data.py
+
+# Disclaimer / Privacy Notice
+- All outputs with images were deleted, for privacy reasons.
+- The datasets and images were not uploaded to this repository, for privacy reasons.
+- This project is protected with a MIT LICENSE.
 
 # References
 
