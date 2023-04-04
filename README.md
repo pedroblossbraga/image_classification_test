@@ -18,9 +18,37 @@ In order to use the tf.keras.utils functions to sample data, the images resultin
 
 The notebook with the initial studies can be found in the file "Noventiq_assignment_CV.ipynb".
 
-# Training and Inference
+# Run 
+## Setup
+
+If it is your first time running this project, set create_setup=TRUE in src/main.py, to create the folders with the extracted images. Having the stored images insted of a dataset of URLs seems interesting so you don't have to make URL requests constantly, and to be able to use the tf.keras.utils functions to sample data.
+
+    Obs: Extracting each image to jpg may take some time.
+
+if you already have the "image_dataset/not st george" and "image_dataset/st george" directories populated with images, you can set create_setup to False.
+
+It is advised to create a virtualenv and install the dependencies:
+- create virtualenv: 
+
+        $ virtualenv env
+
+- activate virtualenv:
+
+        $ source env/bin/activate
+
+- install dependencies:
+
+        $ pip install -r requirements.txt
+
+Note: additional dependencies may be required depending of the operational system. Tensorflow may require diverese installation methods.
+
+## Training and Inference
 
 The model is trained with the src/main.py module, and the prediction can be performed with the function in src/predict.py.
+
+Train the model with:
+
+        $ python src/main.py 
 
 # Directory structure
 - Auxiliary functions are allocated in src/utils.py

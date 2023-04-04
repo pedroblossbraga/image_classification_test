@@ -21,7 +21,7 @@ def main(
     img_width = 180,
     epochs = 10,
     show_history = True,
-    create_setup =  False
+    create_setup =  True
 ):
     """
     ------------------------
