@@ -13,6 +13,18 @@ Since initially the model presented overfitting, data augmentation and dropout r
 
 In order to use the tf.keras.utils functions to sample data, the images resulting from URLs were stored in a folder for each class.
 
+# Training and Inference
+
+The model is trained with the src/main.py module, and the prediction can be performed with the function in src/predict.py.
+
+# Directory structure
+- Auxiliary functions are allocated in src/utils.py
+- Data visualization related scripts are in src/plots.py
+- Converting the model to tflite and saving can be found in src/save_model.py
+- To create the necessary folders and extract the images into a folder, use src/setup_dir.py
+- The model is in src/models.py
+- A function to load the URL-databases is in src/load_data.py
+
 # References
 
 1. https://www.tensorflow.org/tutorials/images/classification
